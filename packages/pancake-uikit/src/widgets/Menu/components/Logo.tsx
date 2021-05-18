@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import { Link } from "react-router-dom";
-import { LogoIcon } from "../../../components/Svg";
+// import { LogoIcon } from "../../../components/Svg";
 import Flex from "../../../components/Box/Flex";
 import { HamburgerIcon, HamburgerCloseIcon, LogoIcon as LogoWithText } from "../icons";
 import MenuButton from "./MenuButton";
@@ -52,14 +52,14 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      <LogoIcon className="mobile-icon" />
+      {/* <LogoIcon className="mobile-icon" /> */}
       <LogoWithText className="desktop-icon" isDark={isDark} />
     </>
   );
 
   return (
     <Flex>
-      <MenuButton aria-label="Toggle menu" onClick={togglePush} mr="24px">
+      <MenuButton aria-label="Toggle menu" onClick={togglePush} mr="0px">
         {isPushed ? (
           <HamburgerCloseIcon width="24px" color="textSubtle" />
         ) : (
